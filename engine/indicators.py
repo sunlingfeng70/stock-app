@@ -18,7 +18,7 @@ def compute_all(df):
     rsi_p = p["rsi_period"]
     vol_p = p["volume_ma_period"]
 
-    result = {}
+    result = {"close": close, "high": high, "low": low, "volume": volume}
 
     result["ma20"] = _ma(close, ma_short)
     result["ma60"] = _ma(close, ma_long)

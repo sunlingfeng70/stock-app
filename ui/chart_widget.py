@@ -1,9 +1,13 @@
 import matplotlib
 matplotlib.use("QtAgg")
+import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 from PySide6.QtWidgets import QVBoxLayout, QWidget
 import numpy as np
+
+plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang SC", "Heiti SC", "WenQuanYi Micro Hei"]
+plt.rcParams["axes.unicode_minus"] = False
 
 
 class ChartWidget(QWidget):
